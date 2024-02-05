@@ -1,5 +1,5 @@
 import requests, json
-from Singleton import Mapa
+from app.singleton import Mapa
 
 namePlayers = []
 qtdPlayers = 0

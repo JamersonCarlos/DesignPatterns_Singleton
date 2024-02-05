@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
-from Singleton import Mapa
-from Jogador import Jogador
-from Territory import Territory
+from app.singleton import Mapa
+from app.Jogador import Jogador
+from app.territory import Territory
 import json
 
 

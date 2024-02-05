@@ -6,28 +6,30 @@ class Mapa():
     def __init__(self):
         self.nomeMapa = None
         self.territories = None   
-        self.mapaMatriz = None
+        self.mapaMatriz = [['|','|','|','|','|','|','|','|','|','|','|','|', '|', '|'], 
+                           ['|','|','|','|','|','|','|','|','|','|','|','|', '|', '|'], 
+                           ['|','|','|','|','|','|','|','|','|','|','|','|', '|', '|']]
         self.players = None    
     
     
-    @classmethod
+ 
     def instance(cls):
         if cls._instance is None:
             cls._instance = cls()
         return cls._instance
         
-    @classmethod
+
     def getMapa(self): 
         return self.mapaMatriz    
             
-    @classmethod
+
     def getTerritories(self): 
         return self.territories 
 
-    @classmethod
+
     def getPlayers(self): 
         return self.players
-    
+
     def sortTerritories(self): 
         for i in range(len(self.players)):
             qtdTerritóriosPlayer = 0 
