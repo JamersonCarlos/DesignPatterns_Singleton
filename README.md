@@ -1,44 +1,42 @@
-# Box Vagrant usada no curso de Rails 5.x
+# Engenharia de Software - Implementação de Design Patterns 
+A api em flask foi desenvolvida baseada na história: Como um jogador, gostaria que o mapa se expandisse a medida que eu fosse explorando e ganhando território. Para isso, gostaria que o mapa estivesse balanceado e testado para a jogabilidade. Além de diferentes mapas. Que representa uma pequena funcionalidade do jogo WAR. 
 
-Para usar essa box você precisa instalar o:
+## Indice 
+- <a href="#-tecnologias-utilizadas">Instalação do projeto<a> 
+- <a href="#-requisitos-tecnicos">Requisitos Técnicos<a>
+- <a href="#-como-rodar-projeto">Como rodar o projeto?<a>
+- <a href="#-como-rodar-testes">Como rodar os testes?<a>
 
-- VirtualBox (https://www.virtualbox.org/)
-- Vagrant (https://www.vagrantup.com/)
-- Git for Windows (somente para usuários Windows - https://gitforwindows.org/)
+## 📱 Instalação do projeto 
 
-## Após a instalação dos itens acima, siga os passos abaixo, usando um terminal.
+```bash
+#Clone este repositório
+git clone https://github.com/your-username/war-game-api.git
+cd war-game-api
 
-1- Instale o plugin do vagrant
-```
-vagrant plugin install vagrant-vbguest
-```
-
-2- Clone esse repositório e entre na pasta
-```
-git clone https://github.com/jacksonpires/curso-rails
-cd curso-rails
-```
-
-3- Inicie a box
-```
-vagrant up
+#Instale as dependências 
+pip install -r requirements.txt
 ```
 
-4- Acesse o Cloud9 em **http://localhost:8181**  ou use o **vagrant ssh** para acessar a box via ssh.
+## ⚙️ Requisitos técnicos 
 
-## Dicas de comandos para gerir sua box
+- Python 3.8 ou superior
+- Bibliotecas externas: Flask 2.1.1, requests 2.26.0, pytest 7.4.11
 
-- Para pausar a box
-```
-vagrant suspend
+## 📟 Como rodar o projeto? 
+
+```bash
+#Inicializar API na porta 5000  
+python app/app.py
+
+#Realizando consultas usando o prompt 
+python main.py
 ```
 
-- Para iniciar/levantar a box
-```
-vagrant up
-```
+## 🛠 Como rodar os testes? 
 
-- Para parar a box
-```
-vagrant halt
+```bash
+#Execute o comando 
+pytest 
+
 ```
