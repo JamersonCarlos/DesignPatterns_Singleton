@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
-from app.singleton import Mapa
-from app.jogador import Jogador
-from app.territory import Territory
+from singleton import Mapa
+from jogador import Jogador
+from territory import Territory
 import json
 
 
@@ -9,16 +9,6 @@ app = Flask(__name__)
 listIdentificationsPlayerMapa = ['%', '$', '*', '#']
 mapa = Mapa.instance()
 mapa.nomeMapa = 'Nether Minecraft'
-
-#Inicializando matrizMapa
-MapaMatriz = []
-for i in range(3): 
-    MapaMatriz.append([])
-    for g in range(14): 
-        MapaMatriz[i].append('|')
-
-#Definindo mapa com 42 territórios 
-mapa.mapaMatriz = MapaMatriz 
 
 @app.route('/setPlayers', methods=['POST'])
 def setPlayers():
